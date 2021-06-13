@@ -1,37 +1,12 @@
-// const player = {
-//     name : "kim",
-//     point :10,
-//     fat : false,
-// };
+const loginForm = document.querySelector("#login-form");
+const loginInput  = loginForm.querySelector("input");
 
-// const kk=["water","potato",'tomato'];
-// console.log(kk);
-// kk.push("one");
-// console.log(kk);
 
-// const calculator ={
-//     add : function(a,b){
-//         return a+b
-//     },
-//     minus : function(a,b){
-//        return a-b
-//     },
-//     divice : function(a,b){
-//        return a/b
-//     },
-//     dd : function(a,b){
-//        return a**b;
-//     }
-// }
-
-// calculator.add(10,20);
-// calculator.dd(10,1);
-
-const age =parseInt(prompt("How old"));
-
-function calculateKrAge(ageOfForeigner){
-    return ageOfForeigner +2 ;
+function onLoginSubmit(tomato){
+    tomato.preventDefault();
+    const userName= loginInput.value;
+    console.log(tomato);
+    
 }
 
-const krAge = calculateKrAge(age);
-console.log(krAge);
+loginForm.addEventListener("submit",onLoginSubmit)
