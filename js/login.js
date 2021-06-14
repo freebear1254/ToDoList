@@ -1,8 +1,6 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = loginForm.querySelector("input");
 const hello = document.querySelector("#hello");
-const localUserName = localStorage.getItem("userName");
-
 
 const CLASSNAME_HIDDEN = "hidden";
 const userNameKey ="userName";
