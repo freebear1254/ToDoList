@@ -16,7 +16,7 @@ function getdate(){
 }
 
 function init(){    
-    console.log("clock.js");
+    
     getdate();
     setInterval(getdate,1000);
 }
