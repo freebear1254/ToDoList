@@ -33,4 +33,5 @@ function onLoginSubmit(event){
 function init(){
     
 }
+init();
 
