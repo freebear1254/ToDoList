@@ -8,9 +8,7 @@ body {
     -ms-overflow-style: none;   
 }
 ::-webkit-scrollbar { display: none; }
-.btn{
-    cursor: pointer;
-}
+
 .task__input {
     width:300px;
     font-size: 20px;
@@ -59,15 +57,16 @@ body {
 
   .task__detail ul{
     text-align: left;
-    padding-left: 50px;
-    
+    padding-left: 50px;    
+    font-size: 25px;
   }
 
   .task__detail div{
     width : 495px;
-    display: inline-block;   
-    
+    display: inline-block;       
   }
+
+
   .pending {
     float: left;  
   }
@@ -90,5 +89,13 @@ body {
       height: 30px;
       margin: -5px;
   }
+
+  .btn{
+    cursor: pointer;
+}
+
+.todoBtn{
+    float:right;
+    right:0px;
+}
   
- 
