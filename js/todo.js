@@ -30,7 +30,12 @@ function saveTodos() {
 }
 
 function deleteTodo(event) {
-    const deleteTarget = event.target.parentElement.parentElement;
+    let deleteTarget = event.target.parentElement;
+    console.log(deleteTarget);
+    if(deleteTarget.nodeName === "BUTTON"){
+       deleteTarget = deleteTarget.parentElement;
+       console.log(deleteTarget);
+    }    
     deleteTarget.id;
     toDos = toDos.filter((toDo) => toDo.id !=parseInt (deleteTarget.id));
     deleteTarget.remove();    
