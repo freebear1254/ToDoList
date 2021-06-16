@@ -14,8 +14,6 @@ let toDos = [];
 let finishList = [];
 
 
-
-
 function writeTodo() {
     if (savedTodos !== null) {
         toDos = savedTodos;
@@ -84,12 +82,12 @@ function paintTodo(newTodo, type) {
     li.appendChild(delBtn);
     li.appendChild(subBtn);
     if (type === PENDING) {
-        subBtn.innerHTML = `<i class="fas fa-check"></i>`;
+        subBtn.innerHTML = `<i class="fas fa-check fa-xl"></i>`;
         todoList.appendChild(li);
         subBtn.addEventListener("click", event => chageType(event, FINISHED));
 
     } else if (type === FINISHED) {
-        subBtn.innerHTML = `<i class="fas fa-redo-alt"></i>`
+        subBtn.innerHTML = `<i class="fas fa-redo-alt fa-xl"></i>`
         finishedList.appendChild(li);
         subBtn.addEventListener("click", event => chageType(event, PENDING));
     }

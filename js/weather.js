@@ -5,11 +5,13 @@ const weatherContainer = document.getElementById("weather");
 const spanLocal = weatherContainer.querySelector("span:first-child");
 const spanWeather = weatherContainer.querySelector(".temp");
 const imgWeather = weatherContainer.querySelector("img");
+const CITY_NAME ="Seoul";
 
 function onGeo(position){
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`;  
+
     fetch(url).then(response  => response.json())
     .then(data =>{
         spanLocal.innerText = data.name;
