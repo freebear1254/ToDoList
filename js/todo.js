@@ -30,7 +30,7 @@ function saveTodos() {
 }
 
 function deleteTodo(event) {
-    const deleteTarget = event.target.parentElement;
+    const deleteTarget = event.target.parentElement.parentElement;
     deleteTarget.id;
     toDos = toDos.filter((toDo) => toDo.id !=parseInt (deleteTarget.id));
     deleteTarget.remove();    
@@ -43,7 +43,7 @@ function paintTodo(newTodo) {
     const span = document.createElement("span");
     const delBtn = document.createElement("button");
     span.innerText = newTodo.text;
-    delBtn.innerText = "❌";
+    delBtn.innerHTML = `<i class="far fa-trash-alt"></i>` ;
     li.appendChild(span);
     li.appendChild(delBtn);
     todoList.appendChild(li);
